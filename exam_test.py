@@ -1,8 +1,8 @@
-from Exam import *
+from Exam import main
 import pytest
 
-@pytest.mark.parametrize("a, result", [
-    ([1, 9, -10, -20, -8, 7, 14, 0, 20, 20, -20], "-8000")])
+def test1():
+    assert main(1,2,3,4,5,6) == 6
 
-def test_minumn3(a, result):
-    assert minumn3(a) == int(result)
+def test2():
+    assert main(-1,2,-3,4,-5,6) == -120
